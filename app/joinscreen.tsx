@@ -4,17 +4,23 @@ import { StyleSheet, View } from 'react-native';
 
 export default function JoinScreen() {
   return (
-    <Stack>
-      <Stack.Screen name="joinscreen" options={{title: "Join a call"}} />
+    <View style={styles.container}>
+      <Stack.Screen options={{title: "Join a call"}} />
       <View style={styles.fakescreen}/>
-    </Stack>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   fakescreen: {
-    margin: 40,
-    borderRadius: 20,
+    margin: 0,
+    // padding: 10,
+    borderRadius: 10,
     backgroundColor: "black",
+    width: "100%",
+    height: "100%",
+  },
+  container: {
+    padding: 20,
   }
 });
