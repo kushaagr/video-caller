@@ -3,7 +3,7 @@ import { Stack, Link, router } from "expo-router";
 import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
 import { StatusBar } from "expo-status-bar";
 
-export default function CallScreen() {
+export default function JoinScreen() {
   const isPresented = router.canGoBack();
   // If the page was reloaded or navigated to directly, then the modal should be presented as
   // a full screen page. You may need to change the UI to account for this.
@@ -11,12 +11,14 @@ export default function CallScreen() {
     <View style={styles.container}>
       {/* <Stack.Screen options={{headerShown: false, presentation: 'modal'}} /> */}
       {!isPresented && (
-        <Link style={styles.dismissButton} href="../">
+        <Link style={styles.dismissButton} href="(app)">
           Dismiss
         </Link>
       )}
-      <TextInput placeholder="Call id..."  style={styles.useridInput} />
-      <Pressable><Text style={[styles.joinButton]}>Join call</Text></Pressable>
+      <View style={styles.subcontainer}>
+        <TextInput placeholder="Call id..."  style={styles.useridInput} />
+        <Pressable><Text style={[styles.joinButton]}>Join call</Text></Pressable>
+      </View>
     </View>
   );
 }
@@ -25,6 +27,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
+  },
+  subcontainer: {
+    flex: 1,
+    // justifyContent: "flex-end",
+    justifyContent: "center",
+    // paddingBottom: 100,
   },
   dismissButton: {
     padding: 5,
@@ -38,13 +46,13 @@ const styles = StyleSheet.create({
   },
   joinButton: {
     width: "100%",
-    backgroundColor: "dodgerblue",
+    backgroundColor: "royalblue",
     padding: 10,
     marginVertical: 10,
     borderRadius: 10,
     textAlign: "center",
     alignItems: "center",
-    color: "white ,"
+    color: "white"
   },
   useridInput: {
     width: "100%",
