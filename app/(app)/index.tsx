@@ -14,6 +14,7 @@ import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
 import Constants from "expo-constants";
 import { useSession } from "../../ctx";
+import { User } from "../sign-in";
 
 Notifications.setNotificationHandler({
   handleNotification: async () => ({
@@ -35,7 +36,7 @@ export default function App() {
   const responseListener = useRef<Notifications.Subscription>();
   const { signOut, session } = useSession();
 
-  const userData = JSON.parse(session);
+  const userData: User = JSON.parse(session);
 
   useEffect(() => {
     registerForPushNotificationsAsync().then(
@@ -98,7 +99,7 @@ export default function App() {
       <Link href="/callscreen" asChild>
         <Pressable
           style={styles.callButton}
-          android_ripple={{foreground: false, color: "#aaa"}}
+          android_ripple={{foreground: false, color: "#aaa"}} 
         >
           <Text>Create a Call</Text>
         </Pressable>

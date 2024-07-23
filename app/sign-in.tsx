@@ -35,7 +35,7 @@ function UserCard({ data }: { data: User }) {
   function onPress(userId, token) {
     signIn({ userId, token }); 
     router.replace("(app)");
-    
+
     // router.navigate("(app)");
     // router.navigate("/testscreen/")
     // router.replace("(app)/joinscreen");
@@ -91,10 +91,9 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     padding: 10,
     gap: 5,
-    shadowColor: "black",
     shadowOffset: {
-      width: 100,
-      height: 100
+      width: 5,
+      height: 6
     }
   },
   title: {
