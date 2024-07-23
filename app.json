@@ -61,9 +61,12 @@
         "expo-build-properties",
         {
           "android": {
-            "minSdkVersion": 34,
-            "compiledSdkVersion": 34
-          }
+            "minSdkVersion": 33,
+            "extraMavenRepos": [
+              "../../node_modules/@notifee/react-native/android/libs"
+            ]
+          },
+          "ios": {}
         }
       ],
       "@stream-io/video-react-native-sdk",
