@@ -30,6 +30,7 @@
         "android.permission.POST_NOTIFICATIONS",
         "android.permission.FOREGROUND_SERVICE",
         "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+        "android.permission.BLUETOOTH",
         "android.permission.BLUETOOTH_ADMIN",
         "android.permission.ACCESS_NETWORK_STATE",
         "android.permission.CAMERA",
@@ -60,7 +61,10 @@
         "expo-build-properties",
         {
           "android": {
-            "minSdkVersion": 33,
+            "minSdkVersion": 34,
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "kotlinVersion": "1.6.10",
             "extraMavenRepos": [
               "../../node_modules/@notifee/react-native/android/libs"
             ]
