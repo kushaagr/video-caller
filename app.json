@@ -21,8 +21,6 @@
       "bitcode": false
     },
     "android": {
-      "targetSdkVersion": 34,
-      "compiledSdkVersion": 34,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
